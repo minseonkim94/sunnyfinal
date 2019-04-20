@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+h2 {
+  font-family: "Avenir";
+  font-weight: 500px;
+  padding-left: 30px;
+}
+
+.accordion {
+  font-family: "Avenir";
+  background-color: #ea9a85;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: black;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.resumeitem li{
+  list-style: none;
+  font-family: "Avenir";
+}
+
+.resumeitem a{
+  color: red;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+.button {
+  background-color: #EA9981;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: "Avenir";
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: black;
+  text-decoration: none;
+
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+
+<h2>Sunny Kim Resume</h2>
+
+
+
+
+
+<button class="accordion">Education</button>
+<div class="panel">
+  <p>
+	<ul class="resumeitem">
+    <li><b>University of Michigan</b></li>
+      <ul>
+        <li>Master of Science - Information (4.0)</li>
+      </ul>
+      <br>
+    <li><b>Korea University</b></li>
+      <ul>
+        <li>Study abroad - Marketing</li>
+      </ul>
+      <br>
+    <li><b>University of Kansas</b></li>
+      <ul>
+        <li>Bachelor of Science - Journalism, Marketing (3.67)</li>
+      </ul>
+    </ul>
+</p>
+</div>
+
+<button class="accordion">Work Experience</button>
+<div class="panel">
+  <p>
+  	<ul class="resumeitem">
+    	<li><b>Digital Marketing Specialist @DataLocker</b></li>
+        	<ul>
+            <li>- Administered web analytics dashboards, reports, and SEO reporting tools</li>
+            <li>- Created marketing materials with design team including promotional video, product logo, and packaging </li>
+            <li>- Assisted in product management for the launch of new product</li>
+            </ul>
+    </ul>
+   </p>
+</div>
+
+<button class="accordion">Projects</button>
+<div class="panel">
+  <p>
+  <ul class="resumeitem">
+    <li><b>Kansas City Mayor's Office : Innovation Center</b></li>
+        <ul>
+        	<li>- Directed the creation of visual assets such as logo,
+plansbook, mockups, photos, and brand anthem video</li>
+            <li>- Generated campaign strategies to advance Kansas City’s
+Smart City Initiative by the Kansas City Mayor’s Office</li>
+        </ul>
+    </ul>
+    </p>
+</div>
+
+<button class="accordion">Skills</button>
+<div class="panel">
+  <p>
+  <ul class="resumeitem">
+    <li><b>Design</b></li>
+        <ul>
+        	<li>- Sketch, Invision, Illustrator, Indesign, Photoshop, Lightroom, Premiere Pro, After Effects</li>
+        </ul>
+    <li><b>Programming</b></li>
+        <ul>
+          <li>- HTML, css, Javascript</li>
+        </ul>
+    <li><b>Analytics</b></li>
+        <ul>
+          <li>- Google Analytics, Google Adwords, Hootsuite</li>
+        </ul>
+    <li><b>Language</b></li>
+        <ul>
+          <li>- Korean, English</li>
+        </ul>
+    </ul>
+    </p>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+
+</html>

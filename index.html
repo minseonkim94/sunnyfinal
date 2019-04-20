@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138604372-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138604372-1');
+  </script>
+
+
+
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="images/signature_vertical_U_white.png" />
+<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|EB+Garamond|Source+Serif+Pro" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<nav>
+  <div class="logo">
+    <h4>Sunny Kim</h4>
+  </div>
+  <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="photography.html">Side Things</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="burger" onclick="openMenu()">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>
+</div>
+<script src="app.js"></script>
+
+
+
+<!-- Carousel setup -->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/carousel1.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/carousel2.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/carousel3.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/carousel4.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/carousel11.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/carousel6.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/carousel5.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/carousel14.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/carousel13.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/carousel12.jpg" style="width:50%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+
+<script type="application/javascript">
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+function openMenu() {
+  var nav = document.getElementsByClassName("nav-links");
+  var menu = nav[0];
+  menu.classList.toggle('nav-active');
+}
+
+</script>
+
+
+
+
+
+<div class="hello-box">
+<p class="hello">HELLO, I'M SUNNY.</p>
+<br>
+<p class="intro">I am a first year Masters of Information student at the
+University of Michigan focusing on UX Design and HCI.<br>
+​<br>
+Born in Seoul, South Korea and raised in Kansas City, MO,
+I’m a big city native with a Midwestern charm.<br>
+​<br>
+My passion is to create meaningful experiences that connect people,
+especially those eye-catching visuals and attention grabbing design.<br>
+​<br>
+I love learning new things. I take challenges and I work hard.
+And I always look at the bright side of things. (did you notice my name?)</p>
+<br>
+</div>
+
+</body>
+
+
+
+<footer>
+  <div class="footer">
+<br>
+    <h3>Coded by Sunny Kim 2019</h3>
+  	</div>
+</footer>
+</html>
+
+
+<!--
+
+  <header>
+    <h2>Resume</h2>
+    <div class="wrapper">
+        <button class="accordion" type="button">Work Experience</button>
+        <div class="panel">
+        <p>blank description</p>
+        </div>
+        <button class="accordion" type="button">Know me 2</button>
+        <div class="panel">
+        <p>Linkedin</p>
+        </div>
+        <button class="accordion" type="button">Know me 3</button>
+        <div class="panel">
+        <p>blank description</p>
+        </div>
+        <button class="accordion" type="button">Know me 4</button>
+        <div class="panel">
+        <p>blank description</p>
+        </div>
+    </div>
+  </header>
+
+    <script>
+
+      var acc = document.getElementsByClassName("accordion");
+
+        var i;
+
+        for(i = 0; i < acc.length; i++) {
+          acc[i].onclick = function() {
+            this.classList.toggle("active")
+
+            var panel = this.nextElementSibling;
+
+            if(panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            }
+
+            else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          }
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

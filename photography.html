@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138604372-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138604372-1');
+  </script>
+
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="images/signature_vertical_U_white.png" />
+<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|EB+Garamond|Source+Serif+Pro" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<style>
+
+
+
+/* parallax */
+.box1{
+  height: 80vh;
+  width: 100%;
+  background-image: url("images/Photography/portrait.jpg");
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+}
+
+.box2{
+  height: 80vh;
+  width: 100%;
+  background-image: url("images/Photography/nature.jpg");
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+}
+
+.box3{
+  height: 80vh;
+  width: 100%;
+  background-image: url("images/Photography/architecture.jpg");
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+
+}
+
+h1 {
+  font-family: "Avenir";
+  font-weight: bold;
+  font-size: 60px;
+  color: #fff;
+  margin: 0px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+  <div class="wrapper">
+  <nav>
+    <div class="logo">
+      <h4>Sunny Kim</h4>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="photography.html">Side Things</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="burger" onclick="openMenu()">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  </div>
+  <script src="app.js"></script>
+
+
+<p class="sub-title"> PHOTOGRAPHY </p>
+
+
+
+
+  <div class="box1">
+    <h1>Portrait</h1>
+  </div>
+  <div class="box2">
+    <h1>Nature</h1>
+  </div>
+  <div class="box3">
+    <h1>Architecture</h1>
+  </div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+function togglePlay() {
+  var button = document.getElementsByClassName("play-btn")[0];
+  var video = document.getElementsByClassName("player-video")[0];
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+
+function setVolume(val) {
+     var video = document.getElementsByClassName("player-video")[0];
+     video.volume = val / 100;
+ }
+</script>
+
+<script src="app.js"></script>
+
+
+<p class="sub-title"> VIDEOGRAPHY </p>
+<!-- <div class="videoplayer">
+
+  <video autoplay controls>
+    <source src="videos/tutorial.mp4" type="video/mp4">
+      Your browser does not support video.
+  </video>
+</div> -->
+
+<div class="player">
+  <div class="video">
+    <video class="player-video">
+      <source src="video/vlog.mp4" type"video/mp4">
+    </video>
+  </div>
+
+  <div class="player-controls">
+
+    <div class="play-btn">
+      <button class="player-btn" onclick="togglePlay()">
+        <svg class="" width="16" height="16" viewBox="0 0 16 16"><title>play</title><path d="M3 2l10 6-10 6z"></path></svg>
+      </button>
+    </div>
+
+    <div class="sliders">
+      <input type="range" name="volume" class="player-slider" min="0" max="100" step="1" onchange="setVolume(this.value)">
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+</body>
+
+<footer>
+  <div class="footer">
+<br>
+    <h3>Coded by Sunny Kim 2019</h3>
+  	</div>
+</footer>
+
+</html>
