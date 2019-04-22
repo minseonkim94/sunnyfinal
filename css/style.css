@@ -23,7 +23,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #000000;
+  background-color: black;
   min-height: 13vh;
   font-family: "Avenir";
 }
@@ -711,7 +711,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  color: grey;
+  color: black;
   padding-top: 5px;
   padding-bottom: 10px;
   text-align: center;
